@@ -218,3 +218,76 @@ console.log(person["age"]); // Output: 30
 
 const cityName = "city"
 console.log(person[cityName])  // Output: "New York"
+
+
+## Template String  ( `   ` )
+
+- JavaScript-এ টেমপ্লেট স্ট্রিংস বা টেমপ্লেট লিটারালস স্ট্রিং তৈরি করার একটি সহজ উপায়। এটি ভেরিয়েবল এবং এক্সপ্রেশন সহজেই স্ট্রিং-এর মধ্যে যোগ করতে সাহায্য করে, যা কোডকে আরও পড়তে সহজ করে তোলে। টেমপ্লেট স্ট্রিংস ব্যাকটিকস () ব্যবহার করে তৈরি করা হয়
+
+
+const numbers = [89, 35, 98, 12];
+const student = {
+    name: 'Salib Khan',
+    age: 32,
+    movies: ['king khan', 'Dhakar Mastan']
+};
+
+const about = `My Name is ${student.name} age of ${student.age} has number ${numbers[2]} also liked movies ${student.movies[0]}`;
+
+console.log(about)
+
+
+
+let price = 100;
+let discount = 15;
+let finalPrice = `The final price is $${price - discount}.`;
+
+console.log(finalPrice); // Output: "The final price is $85."
+
+
+## Ternary Operator
+
+- **Ternary Operator** হলো `if...else` স্টেটমেন্টের একটি শর্টকাট বা সংক্ষিপ্ত রূপ। এটি একটি কন্ডিশন চেক করে এবং কন্ডিশন `true` হলে এক ভ্যালু, আর `false` হলে আরেকটি ভ্যালু রিটার্ন করে।
+
+### **Syntax**
+
+
+condition ? expression1 : expression2;
+
+
+- `condition`: A boolean expression (evaluates to `true` or `false`).
+- `expression1`: The value or code to return if the condition is `true`.
+- `expression2`: The value or code to return if the condition is `false`.
+
+
+const age = 18;
+
+// Using Ternary Operator
+const eligibility = age >= 18 ? "Eligible to vote" : "Not eligible to vote";
+
+console.log(eligibility); // Output: Eligible to vote
+
+
+
+const isLoggedIn = true;
+
+// Assign a message based on login status
+const message = isLoggedIn ? "Welcome back!" : "Please log in.";
+
+console.log(message); // Output: Welcome back!
+
+
+
+const isDarkMode = true;
+
+// Using ternary for inline functionality
+isDarkMode ? console.log("Dark mode enabled") : console.log("Light mode enabled");
+// Output: Dark mode enabled
+
+
+**Multiple condition**
+
+
+let drink = (money > 100 && myVar > 100) ? 'coke' : 'filter water';
+
+
