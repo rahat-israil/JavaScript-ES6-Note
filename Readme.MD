@@ -758,3 +758,99 @@ const products = [
 const remaining = products.filter(p => p.name !== 'phone');
 
 
+## **truthy**
+
+- JavaScript-এ **"truthy"** মানে এমন কোনো ভ্যালু যা **boolean context** (যেমন `if` statement বা logical operation) এ ব্যবহার করলে **`true`** হিসেবে বিবেচিত হয়।
+
+যখন JavaScript কোনো ভ্যালুকে **boolean** হিসেবে রূপান্তর করে (যেমন `if` statement বা অন্য কোনো তুলনামূলক অপারেশনে), তখন **truthy** মানে হলো সেই ভ্যালু **`true`** হিসেবে বিবেচিত হবে।
+
+### **Truthy Value Examples:**
+
+- খালি নয় এমন স্ট্রিং (যেমন `"hello"`, `'0'`, `' '`).
+- শূন্য ছাড়া অন্য যে কোনো সংখ্যা (যেমন `1`, `1`, `3.14`).
+- অবজেক্ট (যেমন `{}`, `[]`).
+- ফাংশন (যেমন `function() {}`).
+- `true` (boolean নিজেই).
+
+
+let name = "Ali Hasan";
+
+if (name) {
+  console.log("এটি একটি truthy মান");
+} else {
+  console.log("এটি একটি falsy মান");
+}
+// Output : এটি একটি truthy মান
+
+
+
+let myVar = 5;
+ 
+if (myVar) {
+    myVar = myVar * 100;
+}
+else {
+    myVar = 0;
+}
+// Output : 500
+
+
+## **falsy**
+
+JavaScript-এ **"falsy"** মানে এমন ভ্যালু যা **boolean context** (যেমন `if` statement বা logical operation) এ ব্যবহৃত হলে **`false`** হিসেবে বিবেচিত হয়।
+
+### **Falsy Values in JavaScript**:
+
+JavaScript-এ মোট **6টি falsy** ভ্যালু রয়েছে:
+
+- **`false`** — boolean মান `false`।
+- **`0`** — শূন্য সংখ্যা।
+- **`""` (খালি স্ট্রিং)** — কোনো ক্যারেক্টার ছাড়া স্ট্রিং।
+- **`null`** — একটি নাল বা অস্তিত্বহীন মান।
+- **`undefined`** — কোনো মান সংজ্ঞায়িত না হওয়া বা অপরিবর্তিত মান।
+- **`NaN`** — "Not a Number" মান, যা তখন রিটার্ন হয় যখন কোনো গাণিতিক অপারেশন ব্যর্থ হয়।
+
+
+let userInput = "";  // An empty string is falsy
+
+if (userInput) {
+  console.log("User input is not empty.");
+} else {
+  console.log("User input is empty.");
+}
+// Output : User input is empty.
+
+
+
+let quantity = 0;  // Zero is falsy
+
+if (quantity) {
+  console.log("Quantity is greater than zero.");
+} else {
+  console.log("Quantity is zero.");
+}
+// Output : Quantity is zero.
+
+
+
+let userInput = "";  // An empty string is falsy
+
+if (!userInput) {
+  console.log("User input is empty.");
+} else {
+  console.log("User input is not empty.");
+}
+// Output : User input is empty.
+
+
+
+let quantity = 0;  // Zero is falsy
+
+if (!quantity) {
+  console.log("Quantity is zero.");
+} else {
+  console.log("Quantity is greater than zero.");
+}
+// Output : Quantity is zero.
+
+
