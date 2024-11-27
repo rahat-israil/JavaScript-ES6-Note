@@ -291,3 +291,79 @@ isDarkMode ? console.log("Dark mode enabled") : console.log("Light mode enabled"
 let drink = (money > 100 && myVar > 100) ? 'coke' : 'filter water';
 
 
+## Arrow Function  ( ⇒ )
+
+- **Arrow functions** are a shorter and more concise way to write functions in JavaScript. They are especially useful for simple operations and are often used in modern JavaScript development. Arrow functions use the `=>` syntax and were introduced in ES6.
+
+
+const getFiftyFive = () => 55;
+const addSixtyFive = num => num + 65;
+const isEven = x => x % 2 == 0;
+const addThree = (x, y, z) => x + y + z;
+
+const doMath = (num1, num2) => {
+    const sum = num1 + num2;
+    return sum;
+}
+
+
+
+const add = (a, b) => a + b
+console.log(add(5, 3)); // Output: 8
+
+let numbers = [1, 2, 3, 4, 5];
+let doubled = numbers.map(num => num * 2);
+
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+
+
+## Spread Operator
+
+- **স্প্রেড অপারেটর** (`...`) JavaScript-এ একটি শক্তিশালী ফিচার যা আপনাকে **এরে** বা **অবজেক্ট** থেকে উপাদানগুলি "স্প্রেড" বা "আনপ্যাক" করতে সাহায্য করে। এটি একাধিক অ্যারে/অবজেক্টকে একত্রিত করতে বা একটি অ্যারে/অবজেক্টের উপাদানগুলোকে অন্য অ্যারে/অবজেক্টে কপি করতে ব্যবহৃত হয়। স্প্রেড অপারেটরটি অ্যারে এবং অবজেক্টের সাথে কাজ করার সময় খুবই কার্যকর।
+
+
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+
+// Copying elements from arr1 into a new array
+let copiedArray = [...arr1];
+console.log(copiedArray); // Output: [1, 2, 3]
+
+// Combining two arrays
+let combinedArray = [...arr1, ...arr2];
+console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 6]
+
+
+
+let person = {
+    name: "John",
+    age: 30
+};
+
+let contact = {
+    email: "john@example.com",
+    phone: "123456789"
+};
+
+// Copying the person object
+let newPerson = {...person};
+console.log(newPerson); // Output: { name: "John", age: 30 }
+
+// Combining two objects
+let combinedObject = {...person, ...contact};
+console.log(combinedObject);
+// Output: { name: "John", age: 30, email: "john@example.com", phone: "123456789" }
+
+
+
+let arr = [1, 2, 3];
+
+// Adding a new element to the front
+let updatedArr = [0, ...arr];
+console.log(updatedArr); // Output: [0, 1, 2, 3]
+
+// Adding a new element to the end
+updatedArr = [...arr, 4];
+console.log(updatedArr); // Output: [1, 2, 3, 4]
+
+
