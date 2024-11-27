@@ -607,3 +607,404 @@ console.log(name); // Output: John
 console.log(age);  // Output: 30 (default value)
 
 
+### Nested Object Destructuring
+
+
+const person = {
+  name: "Sarah",
+  contact: {
+    email: "sarah@example.com",
+    phone: "123-456-7890"
+  }
+};
+
+// Nested object destructuring
+const { name, contact: { email, phone } } = person;
+
+console.log(name);  // Output: Sarah
+console.log(email); // Output: sarah@example.com
+console.log(phone); // Output: 123-456-7890
+
+
+- **Object Destructuring**-এ `?` অপারেটর সরাসরি কোনো ভিন্ন কাজ করে না, কিন্তু এটি **Optional Chaining (`?.`)** এর মাধ্যমে অবজেক্টের গভীরতর প্রপার্টি নিরাপদে অ্যাক্সেস করতে সাহায্য করে। এটি `null` বা `undefined` প্রপার্টি থাকলে এরর না দিয়ে `undefined` রিটার্ন করে।
+
+
+const employee = {
+    ide: 'VS Code',
+    designation: 'developer',
+    machine: 'mac',
+    languages: ['html', 'css', 'js'],
+    specification: {
+        height: 66,
+        weight: 67,
+        address: 'kumarkhali',
+        drink: 'water',
+        watch: {
+            color: 'black',
+            price: 500,
+            brand: 'garmin'
+        }
+    }
+}
+
+const { machine, ide } = employee;
+// const { weight, address } = employee.specification;
+const { brand } = employee?.specification?.watch;
+
+
+## JSON  
+
+- **`JSON.stringify()`** এবং **`JSON.parse()`** হলো জাভাস্ক্রিপ্টের দুটি মেথড যা ডাটা ফরম্যাট পরিবর্তনের জন্য ব্যবহৃত হয়। 
+- **`JSON.stringify()`**: জাভাস্ক্রিপ্ট অবজেক্টকে JSON ফরম্যাটে স্ট্রিং-এ রূপান্তর করে।
+- **`JSON.parse()`**: JSON ফরম্যাটের স্ট্রিংকে আবার জাভাস্ক্রিপ্ট অবজেক্টে রূপান্তর করে।
+
+### **Stringifying JSON (Convert JavaScript Object to JSON String)**  
+
+
+const user = {
+  name: "Ali",
+  age: 25
+};
+
+// Convert JavaScript object to JSON string
+const jsonString = JSON.stringify(user);
+
+console.log(jsonString); 
+// Output: {"name":"Ali","age":25}
+
+
+### **Parsing JSON (Convert JSON String to JavaScript Object)** 
+
+
+const jsonString = '{"name": "Ali", "age": 25}';
+
+// Convert JSON string to JavaScript object
+const user = JSON.parse(jsonString);
+
+console.log(user.name); // Output: Ali
+console.log(user.age);  // Output: 25
+
+
+**Full Code**
+
+
+// Step 1: Create a JavaScript object
+const user = {
+  name: "Ali Hasan",
+  age: 25,
+  isStudent: true,
+  skills: ["HTML", "CSS", "JavaScript"],
+  address: {
+    city: "Dhaka",
+    country: "Bangladesh"
+  }
+};
+
+console.log("Original Object:", user);
+
+// Step 2: Convert the JavaScript object into a JSON string
+const jsonString = JSON.stringify(user);
+console.log("Stringified JSON:", jsonString);
+
+// Step 3: Convert the JSON string back into a JavaScript object
+const parsedObject = JSON.parse(jsonString);
+console.log("Parsed Object:", parsedObject);
+
+
+## Fetch
+
+- `fetch` API হল জাভাস্ক্রিপ্টের একটি আধুনিক পদ্ধতি যা নেটওয়ার্ক রিকোয়েস্ট (যেমন সার্ভার থেকে ডেটা আনা বা সার্ভারে ডেটা পাঠানো) করার জন্য ব্যবহৃত হয়। এটি পুরনো `XMLHttpRequest` এর একটি উন্নত এবং নমনীয় বিকল্প।
+
+
+fetch('url')
+    .then(res => res.json())
+    .then(data => console.log(data));
+
+
+## Key & Value in a Object
+
+- JavaScript এ **`Object.keys()`** এবং **`Object.values()`** ব্যবহার করে আপনি কোনো অবজেক্টের **কী** (property) এবং **ভ্যালু** (value) আলাদা করে পেতে পারেন।
+
+
+const student = {
+  name: 'John Doe',
+  age: 21,
+  course: 'Computer Science',
+  isGraduated: false
+};
+
+// Get all keys of the student object
+const keys = Object.keys(student);
+console.log(keys); 
+// Output: ['name', 'age', 'course', 'isGraduated']
+
+// Get all values of the student object
+const values = Object.values(student);
+console.log(values);
+// Output: ['John Doe', 21, 'Computer Science', false]
+
+
+## Remove phone means create a new array without the phone
+
+
+const products = [
+    { name: 'laptop', price: 3200, brand: 'len', color: 'silver' },
+    { name: 'phone', price: 7000, brand: 'HTC', color: 'golden' },
+    { name: 'watch', price: 3000, brand: 'casio', color: 'yellow' },
+    { name: 'sungalss', price: 300, brand: 'ray', color: 'black' },
+    { name: 'camera', price: 9000, brand: 'canon', color: 'gray' }
+];
+
+const remaining = products.filter(p => p.name !== 'phone');
+
+
+## **truthy**
+
+- JavaScript-এ **"truthy"** মানে এমন কোনো ভ্যালু যা **boolean context** (যেমন `if` statement বা logical operation) এ ব্যবহার করলে **`true`** হিসেবে বিবেচিত হয়।
+
+যখন JavaScript কোনো ভ্যালুকে **boolean** হিসেবে রূপান্তর করে (যেমন `if` statement বা অন্য কোনো তুলনামূলক অপারেশনে), তখন **truthy** মানে হলো সেই ভ্যালু **`true`** হিসেবে বিবেচিত হবে।
+
+### **Truthy Value Examples:**
+
+- খালি নয় এমন স্ট্রিং (যেমন `"hello"`, `'0'`, `' '`).
+- শূন্য ছাড়া অন্য যে কোনো সংখ্যা (যেমন `1`, `1`, `3.14`).
+- অবজেক্ট (যেমন `{}`, `[]`).
+- ফাংশন (যেমন `function() {}`).
+- `true` (boolean নিজেই).
+
+
+let name = "Ali Hasan";
+
+if (name) {
+  console.log("এটি একটি truthy মান");
+} else {
+  console.log("এটি একটি falsy মান");
+}
+// Output : এটি একটি truthy মান
+
+
+
+let myVar = 5;
+ 
+if (myVar) {
+    myVar = myVar * 100;
+}
+else {
+    myVar = 0;
+}
+// Output : 500
+
+
+## **falsy**
+
+JavaScript-এ **"falsy"** মানে এমন ভ্যালু যা **boolean context** (যেমন `if` statement বা logical operation) এ ব্যবহৃত হলে **`false`** হিসেবে বিবেচিত হয়।
+
+### **Falsy Values in JavaScript**:
+
+JavaScript-এ মোট **6টি falsy** ভ্যালু রয়েছে:
+
+- **`false`** — boolean মান `false`।
+- **`0`** — শূন্য সংখ্যা।
+- **`""` (খালি স্ট্রিং)** — কোনো ক্যারেক্টার ছাড়া স্ট্রিং।
+- **`null`** — একটি নাল বা অস্তিত্বহীন মান।
+- **`undefined`** — কোনো মান সংজ্ঞায়িত না হওয়া বা অপরিবর্তিত মান।
+- **`NaN`** — "Not a Number" মান, যা তখন রিটার্ন হয় যখন কোনো গাণিতিক অপারেশন ব্যর্থ হয়।
+
+
+let userInput = "";  // An empty string is falsy
+
+if (userInput) {
+  console.log("User input is not empty.");
+} else {
+  console.log("User input is empty.");
+}
+// Output : User input is empty.
+
+
+
+let quantity = 0;  // Zero is falsy
+
+if (quantity) {
+  console.log("Quantity is greater than zero.");
+} else {
+  console.log("Quantity is zero.");
+}
+// Output : Quantity is zero.
+
+
+
+let userInput = "";  // An empty string is falsy
+
+if (!userInput) {
+  console.log("User input is empty.");
+} else {
+  console.log("User input is not empty.");
+}
+// Output : User input is empty.
+
+
+
+let quantity = 0;  // Zero is falsy
+
+if (!quantity) {
+  console.log("Quantity is zero.");
+} else {
+  console.log("Quantity is greater than zero.");
+}
+// Output : Quantity is zero.
+
+
+## Number to String conversion
+
+
+const num1 = 52;
+
+const numStr = num1 + ''; 
+console.log(numStr)
+
+
+## String to Number conversion
+
+
+const input = '560';
+const inputNum = +input;
+console.log(inputNum);
+
+
+## Toggle
+
+
+let isActive = true;
+const showUser = () => console.log('display User');
+const hideUser = () => console.log('hide User');
+
+ isActive ? showUser() : hideUser();
+
+
+### use && if the left side is true then right side will be executed
+
+- এটি **short-circuit evaluation** ব্যবহার করে যেখানে **logical AND (`&&`)** অপারেটর দিয়ে কাজ করা হয়। এটি খুব সংক্ষিপ্তভাবে কোনো শর্ত (condition) চেক করে একটি কাজ সম্পন্ন করে।
+
+**Explanation:**
+
+1. **`isActive && showUser();`**
+    - প্রথমে **`isActive`** চেক করা হবে।
+    - যদি **`isActive`** **truthy** হয় (যেমন: `true`), তাহলে **`showUser()`** ফাংশন কল হবে।
+    - যদি **`isActive`** **falsy** হয় (যেমন: `false`), তাহলে **`showUser()`** ফাংশন কল হবে না।
+2. **`&&` (Logical AND) এর কাজ:**
+    - `&&` অপারেটর প্রথম অংশটি (left side) চেক করে।
+    - যদি প্রথম অংশটি **truthy** হয়, তাহলে দ্বিতীয় অংশ (right side) এক্সিকিউট (execute) হয়।
+    - যদি প্রথম অংশটি **falsy** হয়, তাহলে দ্বিতীয় অংশ এক্সিকিউট হয় না।
+
+
+let isActive = true;
+const showUser = () => console.log('display User');
+
+isActive && showUser(); // Executes showUser()
+// Output : display User
+
+
+use || if the left side is false then right side will be executed
+
+- এটি **short-circuit evaluation** এর উদাহরণ, যেখানে **logical OR (`||`) operator** ব্যবহার করা হয়। এটি শর্ত (condition) চেক করার জন্য একটি সহজ পদ্ধতি।
+
+**Explanation:**
+
+1. **`isActive || hideUser();`**
+    - প্রথমে **`isActive`** চেক করা হবে।
+    - যদি **`isActive`** **truthy** (যেমন: `true`) হয়, তাহলে **`hideUser()`** ফাংশন এক্সিকিউট (execute) হবে না।
+    - যদি **`isActive`** **falsy** (যেমন: `false`) হয়, তাহলে **`hideUser()`** ফাংশন এক্সিকিউট হবে।
+2. **`||` (Logical OR) এর কাজ:**
+    - `||` অপারেটর প্রথম অংশটি (left side) চেক করে।
+    - যদি প্রথম অংশটি **truthy** হয়, তাহলে সেটি রিটার্ন (return) করে এবং দ্বিতীয় অংশ এক্সিকিউট করে না।
+    - যদি প্রথম অংশটি **falsy** হয়, তাহলে দ্বিতীয় অংশ এক্সিকিউট করে।
+
+
+let isActive = true;
+const hideUser = () => console.log('hide User');
+
+isActive || hideUser(); // `hideUser()` won't be called
+
+
+
+let isActive = false;
+const hideUser = () => console.log('hide User');
+
+isActive || hideUser(); // `hideUser()` will be called
+// Output :  hide User
+
+
+## Toggle boolean
+
+
+let isActive = true;
+const showUser = () => console.log('display User');
+const hideUser = () => console.log('hide User');
+
+// use && if the left side is true then right side will be executed
+isActive && showUser();
+// use || if the left side is false then right side will be executed
+isActive || hideUser();
+
+// toggle boolean
+isActive = !isActive;
+
+
+## **Notation**
+
+- **Notation** সাধারণভাবে এমন একটি বিশেষ পদ্ধতি বা চিহ্ন যা কোনো কিছু বোঝাতে বা নির্দিষ্ট কাজ করতে ব্যবহৃত হয়। JavaScript-এ নোটেশন মূলত কোড লেখার নির্দিষ্ট নিয়ম বা স্টাইল যা কোনো ডেটা টাইপ, অপারেশন বা ফাংশন ব্যবহার করার পদ্ধতি বোঝায়। সহজ ভাষায়, এটি এমন চিহ্ন বা সিম্বল যা কোনো কার্যকলাপ বা প্রক্রিয়া সম্পাদন করতে ব্যবহৃত হয়।
+
+### **1. ডট নোটেশন (Dot Notation)**
+
+ডট নোটেশন হল অবজেক্টের প্রপার্টি অ্যাক্সেস করার সবচেয়ে সাধারণ উপায়। এটি সরল এবং ব্যবহার করা সহজ।
+
+### **সিনট্যাক্স:**
+
+
+object.property
+
+
+এখানে `object` হলো অবজেক্টের নাম এবং `property` হলো সেই অবজেক্টের প্রপার্টির নাম।
+
+### **উদাহরণ:**
+
+
+const person = { name: 'Ali', age: 25 };
+
+console.log(person.name);  // আউটপুট: Ali
+console.log(person.age);   // আউটপুট: 25
+
+
+এই উদাহরণে, `person.name` এবং `person.age` ডট নোটেশন ব্যবহার করে `name` এবং `age` প্রপার্টিগুলি অ্যাক্সেস করছে।
+
+### **2. ব্র্যাকেট নোটেশন (Bracket Notation)**
+
+ব্র্যাকেট নোটেশন ব্যবহার করে আমরা অবজেক্টের প্রপার্টি অ্যাক্সেস করতে পারি যেখানে প্রপার্টির নাম স্ট্রিং আকারে থাকে বা যখন আমরা কোনো ভেরিয়েবল ব্যবহার করতে চাই। এটি তখনও ব্যবহার করা হয় যখন প্রপার্টির নাম স্পেস বা বিশেষ চিহ্ন থাকে।
+
+### **সিনট্যাক্স:**
+
+
+object["property"]
+
+
+### **উদাহরণ ১:**
+
+
+const person = { "first name": 'Ali', age: 25 };
+
+console.log(person["first name"]);  // আউটপুট: Ali
+console.log(person["age"]);         // আউটপুট: 25
+
+
+এই ক্ষেত্রে, যেহেতু প্রপার্টির নামের মধ্যে স্পেস আছে (`"first name"`), ডট নোটেশন ব্যবহার করা যাবে না। সেজন্য আমরা **ব্র্যাকেট নোটেশন** ব্যবহার করেছি।
+
+### **উদাহরণ ২: ভেরিয়েবল ব্যবহার করা**
+
+
+const person = { name: 'Ali', age: 25 };
+const key = "name";
+
+console.log(person[key]);  // আউটপুট: Ali
+
+
+এখানে, আমরা ভেরিয়েবল `key` ব্যবহার করে ডাইনামিকভাবে প্রপার্টি অ্যাক্সেস করছি। ব্র্যাকেট নোটেশন এই ধরনের অ্যাক্সেসকে সহজে সমর্থন করে।
