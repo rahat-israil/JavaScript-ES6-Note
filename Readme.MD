@@ -367,3 +367,97 @@ updatedArr = [...arr, 4];
 console.log(updatedArr); // Output: [1, 2, 3, 4]
 
 
+## Array Map
+
+- **`map()`** মেথড JavaScript-এ একটি অ্যারের প্রতিটি উপাদানের উপর কাজ করে এবং সেই উপাদানগুলোকে পরিবর্তন করে একটি **নতুন অ্যারে** তৈরি করে। এটি মূল অ্যারেটিকে পরিবর্তন না করেই নতুন মান যুক্ত করে।
+- একটি **নতুন অ্যারে** রিটার্ন করে যেখানে পরিবর্তিত উপাদান থাকে।
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Use map() to create a new array with doubled values
+const doubled = numbers.map(num => num * 2);
+
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+console.log(numbers); // Original array remains unchanged: [1, 2, 3, 4, 5]
+
+
+
+const users = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 35 }
+];
+
+// Extract only the names of the users
+const names = users.map(user => user.name);
+
+console.log(names); // Output: ["Alice", "Bob", "Charlie"]
+
+
+
+const fruits = ["apple", "banana", "cherry"];
+
+// Convert each fruit name to uppercase
+const uppercased = fruits.map(fruit => fruit.toUpperCase());
+
+console.log(uppercased); // Output: ["APPLE", "BANANA", "CHERRY"]
+
+
+### Key Points:
+
+- **`map()` সবসময় একটি নতুন অ্যারে রিটার্ন করে।** এটি মূল অ্যারেকে পরিবর্তন করে না।
+- নতুন অ্যারের দৈর্ঘ্য মূল অ্যারের সমান হয়।
+- `map()` সাধারণত একটি অ্যারের উপাদান প্রক্রিয়া করতে বা নতুনভাবে সাজাতে ব্যবহৃত হয়।
+
+### When to Use `map()`:
+
+- অ্যারের ডেটা পরিবর্তন বা রূপান্তর করতে।
+- নির্দিষ্ট প্রোপার্টি বের করতে।
+- অ্যারে লুপ করার কাজ সহজ করতে।
+
+## for Each
+
+- **`forEach()`** মেথড একটি অ্যারের প্রতিটি উপাদানের উপর কাজ করে এবং একটি **callback function** চালায়। এটি মূলত প্রতিটি উপাদানের উপর নির্দিষ্ট কোনো কাজ (যেমন প্রিন্ট করা, একটি ভেরিয়েবল আপডেট করা ইত্যাদি) করার জন্য ব্যবহৃত হয়।
+- **তবে এটি নতুন কোনো অ্যারে রিটার্ন করে না।**
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Print each element
+numbers.forEach(num => {
+    console.log(num);
+});
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
+
+
+
+const fruits = ["apple", "banana", "cherry"];
+
+fruits.forEach((fruit, index) => {
+    console.log(`Index: ${index}, Fruit: ${fruit}`);
+});
+// Output:
+// Index: 0, Fruit: apple
+// Index: 1, Fruit: banana
+// Index: 2, Fruit: cherry
+
+
+
+const numbers = [10, 20, 30];
+let sum = 0;
+
+// Calculate the sum of all elements
+numbers.forEach(num => {
+//	sum = sum + num
+    sum += num;
+});
+
+console.log(sum); // Output: 60
+
+
