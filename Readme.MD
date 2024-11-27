@@ -461,3 +461,82 @@ numbers.forEach(num => {
 console.log(sum); // Output: 60
 
 
+## Filter
+
+- **`filter()`** মেথডটি একটি **নতুন অ্যারে** তৈরি করে, যেখানে শুধুমাত্র সেই উপাদানগুলো থাকে যেগুলো নির্দিষ্ট শর্ত (যা `true` রিটার্ন করে) পূরণ করে। এটি সাধারণত একটি অ্যারের নির্দিষ্ট উপাদানগুলো ফিল্টার করার জন্য ব্যবহার করা হয়।
+- Returns all elements that satisfy the condition.
+- Always returns a new array (even if empty).
+
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+
+console.log(evenNumbers); // Output: [2, 4, 6]
+
+
+
+const names = ["Ali", "Hasan", "John", "Sarah", "Kate"];
+const longNames = names.filter(name => name.length > 4);
+
+console.log(longNames); // Output: ["Hasan", "Sarah"]
+
+
+
+const numbers = [5, -3, 8, -1, 10, -6];
+const positiveNumbers = numbers.filter(num => num > 0);
+
+console.log(positiveNumbers); // Output: [5, 8, 10]
+
+
+
+const names = ["Ali", "Hasan", "rahim", "Rita", "Sarah", "rafiq"];
+
+// Filter names starting with 'R' or 'r'
+const namesWithR = names.filter(name => name.toLowerCase().startsWith("r"));
+
+console.log(namesWithR); // Output: ["rahim", "Rita", "rafiq"]
+
+
+
+const names = ["Ali", "Hasan", "rahim", "Rita", "Sarah", "rafiq"];
+
+// Filter names containing 'R' or 'r'
+const namesWithR = names.filter(name => name.toLowerCase().includes("r"));
+
+console.log(namesWithR); // Output: ["rahim", "Rita", "Sarah", "rafiq"]
+
+
+## Find
+
+- **`find()`** মেথডটি একটি অ্যারের প্রথম উপাদানটি খুঁজে বের করে যা একটি নির্দিষ্ট শর্ত পূরণ করে। এটি **শুধুমাত্র প্রথম ম্যাচিং উপাদান** রিটার্ন করে। যদি কোনও উপাদান শর্ত পূরণ না করে, তাহলে এটি `undefined` রিটার্ন করে।
+- Returns only the first element that satisfies the condition.
+- `find()` Returns an Object (If the Condition Matches)
+- If the condition doesn't match any object in the array, `find()` returns `undefined`.
+
+
+const numbers = [2, 4, 6, 8, 9, 10, 11];
+
+// Find the first odd number
+const firstOdd = numbers.find(num => num % 2 !== 0);
+
+console.log(firstOdd); // Output: 9
+
+
+
+const names = ["Ali", "Hasan", "Rahim", "Rita", "Sarah", "Rafiq"];
+
+// Find the first name with length > 5
+const longName = names.find(name => name.length > 5);
+
+console.log(longName); // Output: "Hasan"
+
+
+
+const names = ["Ali", "Hasan", "Rahim", "Rita", "Sarah", "Rafiq"];
+
+// Find the first name containing 'a' (case-insensitive)
+const nameWithA = names.find(name => name.toLowerCase().includes("a"));
+
+console.log(nameWithA); // Output: "Ali"
+
+
