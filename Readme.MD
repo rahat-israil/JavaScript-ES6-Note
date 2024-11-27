@@ -854,3 +854,99 @@ if (!quantity) {
 // Output : Quantity is zero.
 
 
+## Number to String conversion
+
+
+const num1 = 52;
+
+const numStr = num1 + ''; 
+console.log(numStr)
+
+
+## String to Number conversion
+
+
+const input = '560';
+const inputNum = +input;
+console.log(inputNum);
+
+
+## Toggle
+
+
+let isActive = true;
+const showUser = () => console.log('display User');
+const hideUser = () => console.log('hide User');
+
+ isActive ? showUser() : hideUser();
+
+
+### use && if the left side is true then right side will be executed
+
+- এটি **short-circuit evaluation** ব্যবহার করে যেখানে **logical AND (`&&`)** অপারেটর দিয়ে কাজ করা হয়। এটি খুব সংক্ষিপ্তভাবে কোনো শর্ত (condition) চেক করে একটি কাজ সম্পন্ন করে।
+
+**Explanation:**
+
+1. **`isActive && showUser();`**
+    - প্রথমে **`isActive`** চেক করা হবে।
+    - যদি **`isActive`** **truthy** হয় (যেমন: `true`), তাহলে **`showUser()`** ফাংশন কল হবে।
+    - যদি **`isActive`** **falsy** হয় (যেমন: `false`), তাহলে **`showUser()`** ফাংশন কল হবে না।
+2. **`&&` (Logical AND) এর কাজ:**
+    - `&&` অপারেটর প্রথম অংশটি (left side) চেক করে।
+    - যদি প্রথম অংশটি **truthy** হয়, তাহলে দ্বিতীয় অংশ (right side) এক্সিকিউট (execute) হয়।
+    - যদি প্রথম অংশটি **falsy** হয়, তাহলে দ্বিতীয় অংশ এক্সিকিউট হয় না।
+
+
+let isActive = true;
+const showUser = () => console.log('display User');
+
+isActive && showUser(); // Executes showUser()
+// Output : display User
+
+
+use || if the left side is false then right side will be executed
+
+- এটি **short-circuit evaluation** এর উদাহরণ, যেখানে **logical OR (`||`) operator** ব্যবহার করা হয়। এটি শর্ত (condition) চেক করার জন্য একটি সহজ পদ্ধতি।
+
+**Explanation:**
+
+1. **`isActive || hideUser();`**
+    - প্রথমে **`isActive`** চেক করা হবে।
+    - যদি **`isActive`** **truthy** (যেমন: `true`) হয়, তাহলে **`hideUser()`** ফাংশন এক্সিকিউট (execute) হবে না।
+    - যদি **`isActive`** **falsy** (যেমন: `false`) হয়, তাহলে **`hideUser()`** ফাংশন এক্সিকিউট হবে।
+2. **`||` (Logical OR) এর কাজ:**
+    - `||` অপারেটর প্রথম অংশটি (left side) চেক করে।
+    - যদি প্রথম অংশটি **truthy** হয়, তাহলে সেটি রিটার্ন (return) করে এবং দ্বিতীয় অংশ এক্সিকিউট করে না।
+    - যদি প্রথম অংশটি **falsy** হয়, তাহলে দ্বিতীয় অংশ এক্সিকিউট করে।
+
+
+let isActive = true;
+const hideUser = () => console.log('hide User');
+
+isActive || hideUser(); // `hideUser()` won't be called
+
+
+
+let isActive = false;
+const hideUser = () => console.log('hide User');
+
+isActive || hideUser(); // `hideUser()` will be called
+// Output :  hide User
+
+
+## Toggle boolean
+
+
+let isActive = true;
+const showUser = () => console.log('display User');
+const hideUser = () => console.log('hide User');
+
+// use && if the left side is true then right side will be executed
+isActive && showUser();
+// use || if the left side is false then right side will be executed
+isActive || hideUser();
+
+// toggle boolean
+isActive = !isActive;
+
+
