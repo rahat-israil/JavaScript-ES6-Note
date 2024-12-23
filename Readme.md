@@ -75,3 +75,68 @@ if (age >= 18 || hasPermission) {
 // Output: "You are allowed." because hasPermission is true.
 ```
 
+### 3. Array Declare
+
+- JavaScript-এ একটি অ্যারে ডিক্লেয়ার করতে `[]` ব্র্যাকেট ব্যবহার করা হয়। ব্র্যাকেটের ভিতরে বিভিন্ন মান (elements) কমা দিয়ে আলাদা করে লিখতে হয়।
+
+```jsx
+let fruits = ["apple", "banana", "orange"];
+let numbers = [10, 20, 30, 40, 50]
+```
+
+### Index
+
+Each item in an array has an index (position) that starts from `0`. So, in the `fruits` array:
+
+- `"apple"` is at index `0`
+- `"banana"` is at index `1`
+- `"orange"` is at index `2`
+
+To access an element by its index:
+
+```jsx
+console.log(fruits[1]); // Output: "banana"
+
+fruits[1] = "mango";  // Set the value at index 1
+console.log(fruits); // Output: ["apple", "mango", "orange"]
+```
+
+### Length
+
+The `length` property gives the total number of elements in the array.
+
+```jsx
+console.log(fruits.length); // Output: 3
+```
+
+### `push()`
+
+The `push()` method adds a new element to the end of an array.
+
+```jsx
+fruits.push("grape");
+console.log(fruits); // Output: ["apple", "banana", "orange", "grape"]
+```
+
+### `pop()`
+
+The `pop()` method removes the last element from the array.
+
+```jsx
+fruits.pop();
+console.log(fruits); // Output: ["apple", "banana", "orange"]
+```
+
+### Summary
+
+```jsx
+let fruits = ["apple", "banana", "orange"]; // Declaring an array
+
+console.log(fruits[1]); // Accessing element by index - Output: "banana"
+
+console.log(fruits.length); // Checking length - Output: 3
+
+fruits.push("grape"); // Adding an element - Output: ["apple", "banana", "orange", "grape"]
+fruits.pop(); // Removing the last element - Output: ["apple", "banana", "orange"]
+```
+
