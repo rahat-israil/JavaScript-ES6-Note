@@ -140,3 +140,23 @@ fruits.push("grape"); // Adding an element - Output: ["apple", "banana", "orange
 fruits.pop(); // Removing the last element - Output: ["apple", "banana", "orange"]
 ```
 
+### 4. for Loop
+
+- `for` লুপ কোডের একটি অংশ বারবার চালাতে ব্যবহৃত হয়। এটি সাধারণত কোনো নির্দিষ্ট সংখ্যক বার বা অ্যারের প্রতিটি আইটেমে পুনরাবৃত্তি করতে ব্যবহৃত হয়।
+
+```jsx
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+// আউটপুট: 1, 2, 3, 4, 5
+```
+
+```jsx
+let fruits = ["apple", "banana", "orange"];
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+// আউটপুট: "apple", "banana", "orange"
+```
+
