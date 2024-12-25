@@ -182,3 +182,28 @@ function greet(name) {
 greet("Alice"); // Output: "Hello, Alice"
 ```
 
+### 6. Object
+
+- In JavaScript, an **object** is a collection of **key-value pairs** used to store related data and functions (known as properties and methods). Objects allow you to group related information together.
+
+**Syntax**
+
+```jsx
+let objectName = {
+    key1: value1,
+    key2: value2
+};
+```
+
+- **objectName**: The name you give to the object.
+- **key**: The property name.
+- **value**: The data associated with the property. It can be a string, number, array, another object, or even a function.
+
+```jsx
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+```
+
