@@ -207,3 +207,13 @@ const person = {
 };
 ```
 
+**3 Way to access Property** 
+
+```jsx
+console.log(person.name); // Output: "John"
+console.log(person["age"]); // Output: 30
+
+const cityName = "city"
+console.log(person[cityName])  // Output: "New York"
+```
+
