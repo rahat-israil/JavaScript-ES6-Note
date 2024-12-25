@@ -160,3 +160,25 @@ for (let i = 0; i < fruits.length; i++) {
 // আউটপুট: "apple", "banana", "orange"
 ```
 
+### 5. Function
+
+- A **function** is a reusable block of code designed to perform a particular task. Functions help make code more organized, readable, and easier to maintain.
+
+```jsx
+function multiply(num1, num2) {
+    const result = num1 * num2;
+    return result;
+}
+
+const output = multiply(35, 78);
+console.log(output);
+```
+
+```jsx
+function greet(name) {
+    console.log("Hello, " + name);
+}
+
+greet("Alice"); // Output: "Hello, Alice"
+```
+
