@@ -217,3 +217,28 @@ const cityName = "city"
 console.log(person[cityName])  // Output: "New York"
 ```
 
+## Template String  ( `   ` )
+
+- JavaScript-এ টেমপ্লেট স্ট্রিংস বা টেমপ্লেট লিটারালস স্ট্রিং তৈরি করার একটি সহজ উপায়। এটি ভেরিয়েবল এবং এক্সপ্রেশন সহজেই স্ট্রিং-এর মধ্যে যোগ করতে সাহায্য করে, যা কোডকে আরও পড়তে সহজ করে তোলে। টেমপ্লেট স্ট্রিংস ব্যাকটিকস (```) ব্যবহার করে তৈরি করা হয়
+
+```jsx
+const numbers = [89, 35, 98, 12];
+const student = {
+    name: 'Salib Khan',
+    age: 32,
+    movies: ['king khan', 'Dhakar Mastan']
+};
+
+const about = `My Name is ${student.name} age of ${student.age} has number ${numbers[2]} also liked movies ${student.movies[0]}`;
+
+console.log(about)
+```
+
+```jsx
+let price = 100;
+let discount = 15;
+let finalPrice = `The final price is $${price - discount}.`;
+
+console.log(finalPrice); // Output: "The final price is $85."
+```
+
