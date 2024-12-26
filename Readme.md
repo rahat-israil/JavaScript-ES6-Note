@@ -242,3 +242,43 @@ let finalPrice = `The final price is $${price - discount}.`;
 console.log(finalPrice); // Output: "The final price is $85."
 ```
 
+## Ternary Operator
+
+- **Ternary Operator** হলো `if...else` স্টেটমেন্টের একটি শর্টকাট বা সংক্ষিপ্ত রূপ। এটি একটি কন্ডিশন চেক করে এবং কন্ডিশন `true` হলে এক ভ্যালু, আর `false` হলে আরেকটি ভ্যালু রিটার্ন করে।
+
+### **Syntax**
+
+```jsx
+condition ? expression1 : expression2;
+```
+
+- `condition`: A boolean expression (evaluates to `true` or `false`).
+- `expression1`: The value or code to return if the condition is `true`.
+- `expression2`: The value or code to return if the condition is `false`.
+
+```jsx
+const age = 18;
+
+// Using Ternary Operator
+const eligibility = age >= 18 ? "Eligible to vote" : "Not eligible to vote";
+
+console.log(eligibility); // Output: Eligible to vote
+```
+
+```jsx
+const isLoggedIn = true;
+
+// Assign a message based on login status
+const message = isLoggedIn ? "Welcome back!" : "Please log in.";
+
+console.log(message); // Output: Welcome back!
+```
+
+```jsx
+const isDarkMode = true;
+
+// Using ternary for inline functionality
+isDarkMode ? console.log("Dark mode enabled") : console.log("Light mode enabled");
+// Output: Dark mode enabled
+```
+
