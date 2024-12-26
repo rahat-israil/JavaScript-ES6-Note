@@ -282,3 +282,9 @@ isDarkMode ? console.log("Dark mode enabled") : console.log("Light mode enabled"
 // Output: Dark mode enabled
 ```
 
+**Multiple condition**
+
+```jsx
+let drink = (money > 100 && myVar > 100) ? 'coke' : 'filter water';
+```
+
