@@ -288,3 +288,29 @@ isDarkMode ? console.log("Dark mode enabled") : console.log("Light mode enabled"
 let drink = (money > 100 && myVar > 100) ? 'coke' : 'filter water';
 ```
 
+## Arrow Function  ( ⇒ )
+
+- **Arrow functions** are a shorter and more concise way to write functions in JavaScript. They are especially useful for simple operations and are often used in modern JavaScript development. Arrow functions use the `=>` syntax and were introduced in ES6.
+
+```jsx
+const getFiftyFive = () => 55;
+const addSixtyFive = num => num + 65;
+const isEven = x => x % 2 == 0;
+const addThree = (x, y, z) => x + y + z;
+
+const doMath = (num1, num2) => {
+    const sum = num1 + num2;
+    return sum;
+}
+```
+
+```jsx
+const add = (a, b) => a + b
+console.log(add(5, 3)); // Output: 8
+
+let numbers = [1, 2, 3, 4, 5];
+let doubled = numbers.map(num => num * 2);
+
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+```
+
