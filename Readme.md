@@ -368,3 +368,37 @@ console.log(updatedArr); // Output: [1, 2, 3, 4]
 
 - **`map()`** মেথড JavaScript-এ একটি অ্যারের প্রতিটি উপাদানের উপর কাজ করে এবং সেই উপাদানগুলোকে পরিবর্তন করে একটি **নতুন অ্যারে** তৈরি করে। এটি মূল অ্যারেটিকে পরিবর্তন না করেই নতুন মান যুক্ত করে।
 - একটি **নতুন অ্যারে** রিটার্ন করে যেখানে পরিবর্তিত উপাদান থাকে।
+
+
+```jsx
+const numbers = [1, 2, 3, 4, 5];
+
+// Use map() to create a new array with doubled values
+const doubled = numbers.map(num => num * 2);
+
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+console.log(numbers); // Original array remains unchanged: [1, 2, 3, 4, 5]
+```
+
+```jsx
+const users = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 35 }
+];
+
+// Extract only the names of the users
+const names = users.map(user => user.name);
+
+console.log(names); // Output: ["Alice", "Bob", "Charlie"]
+```
+
+```jsx
+const fruits = ["apple", "banana", "cherry"];
+
+// Convert each fruit name to uppercase
+const uppercased = fruits.map(fruit => fruit.toUpperCase());
+
+console.log(uppercased); // Output: ["APPLE", "BANANA", "CHERRY"]
+```
+
