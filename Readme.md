@@ -413,3 +413,50 @@ console.log(uppercased); // Output: ["APPLE", "BANANA", "CHERRY"]
 - অ্যারের ডেটা পরিবর্তন বা রূপান্তর করতে।
 - নির্দিষ্ট প্রোপার্টি বের করতে।
 - অ্যারে লুপ করার কাজ সহজ করতে।
+
+
+## for Each
+
+- **`forEach()`** মেথড একটি অ্যারের প্রতিটি উপাদানের উপর কাজ করে এবং একটি **callback function** চালায়। এটি মূলত প্রতিটি উপাদানের উপর নির্দিষ্ট কোনো কাজ (যেমন প্রিন্ট করা, একটি ভেরিয়েবল আপডেট করা ইত্যাদি) করার জন্য ব্যবহৃত হয়।
+- **তবে এটি নতুন কোনো অ্যারে রিটার্ন করে না।**
+
+```jsx
+const numbers = [1, 2, 3, 4, 5];
+
+// Print each element
+numbers.forEach(num => {
+    console.log(num);
+});
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
+```
+
+```jsx
+const fruits = ["apple", "banana", "cherry"];
+
+fruits.forEach((fruit, index) => {
+    console.log(`Index: ${index}, Fruit: ${fruit}`);
+});
+// Output:
+// Index: 0, Fruit: apple
+// Index: 1, Fruit: banana
+// Index: 2, Fruit: cherry
+```
+
+```jsx
+const numbers = [10, 20, 30];
+let sum = 0;
+
+// Calculate the sum of all elements
+numbers.forEach(num => {
+//	sum = sum + num
+    sum += num;
+});
+
+console.log(sum); // Output: 60
+```
+
