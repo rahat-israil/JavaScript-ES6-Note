@@ -505,3 +505,37 @@ const namesWithR = names.filter(name => name.toLowerCase().includes("r"));
 console.log(namesWithR); // Output: ["rahim", "Rita", "Sarah", "rafiq"]
 ```
 
+## Find
+
+- **`find()`** মেথডটি একটি অ্যারের প্রথম উপাদানটি খুঁজে বের করে যা একটি নির্দিষ্ট শর্ত পূরণ করে। এটি **শুধুমাত্র প্রথম ম্যাচিং উপাদান** রিটার্ন করে। যদি কোনও উপাদান শর্ত পূরণ না করে, তাহলে এটি `undefined` রিটার্ন করে।
+- Returns only the first element that satisfies the condition.
+- `find()` Returns an Object (If the Condition Matches)
+- If the condition doesn't match any object in the array, `find()` returns `undefined`.
+
+```jsx
+const numbers = [2, 4, 6, 8, 9, 10, 11];
+
+// Find the first odd number
+const firstOdd = numbers.find(num => num % 2 !== 0);
+
+console.log(firstOdd); // Output: 9
+```
+
+```jsx
+const names = ["Ali", "Hasan", "Rahim", "Rita", "Sarah", "Rafiq"];
+
+// Find the first name with length > 5
+const longName = names.find(name => name.length > 5);
+
+console.log(longName); // Output: "Hasan"
+```
+
+```jsx
+const names = ["Ali", "Hasan", "Rahim", "Rita", "Sarah", "Rafiq"];
+
+// Find the first name containing 'a' (case-insensitive)
+const nameWithA = names.find(name => name.toLowerCase().includes("a"));
+
+console.log(nameWithA); // Output: "Ali"
+```
+
