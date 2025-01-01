@@ -575,3 +575,34 @@ const student = {
 const [firstMovie, secondMovie] = student.movies;
 ```
 
+## Object Destructuring
+
+- **Object destructuring** হলো একটি ES6 ফিচার যা আপনাকে একটি অবজেক্ট থেকে তার প্রপার্টিগুলোকে আলাদা ভেরিয়েবল হিসেবে নিতে দেয়। এতে কোড লেখা সহজ হয় এবং একাধিক প্রপার্টি সহজে একসাথে এক্সট্র্যাক্ট করা যায়।
+
+```jsx
+const person = {
+  name: "Ali",
+  age: 25,
+  profession: "Developer"
+};
+
+// Object destructuring
+const { name, age, profession } = person;
+
+console.log(name);       // Output: Ali
+console.log(age);        // Output: 25
+console.log(profession); // Output: Developer
+```
+
+```jsx
+const person = {
+  name: "John"
+};
+
+// Default value
+const { name, age = 30 } = person;
+
+console.log(name); // Output: John
+console.log(age);  // Output: 30 (default value)
+```
+
