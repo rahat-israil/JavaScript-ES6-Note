@@ -539,3 +539,39 @@ const nameWithA = names.find(name => name.toLowerCase().includes("a"));
 console.log(nameWithA); // Output: "Ali"
 ```
 
+## Array Destructuring
+
+- **Array destructuring** হচ্ছে একটি ES6 এর একটি ফিচার যা  একটি অ্যারে থেকে মানগুলো আলাদা ভেরিয়েবল হিসেবে আনপ্যাক করার সুবিধা দেয়। এটি অ্যারে থেকে মানগুলো সহজে আলাদা করার এবং তা আলাদা ভেরিয়েবলগুলোতে যুক্ত করার উপায়।
+
+```jsx
+const array = [1, 2, 3];
+
+// Destructuring the array
+const [a, b, c] = array;
+
+console.log(a); // Output: 1
+console.log(b); // Output: 2
+console.log(c); // Output: 3
+```
+
+```jsx
+const array = [10];
+
+// Assigning a default value to `b` and `c`
+const [a, b = 20, c = 30] = array;
+
+console.log(a); // Output: 10
+console.log(b); // Output: 20 (default value)
+console.log(c); // Output: 30 (default value)
+```
+
+```jsx
+const student = {
+    name: 'Salib Khan',
+    age: 32,
+    movies: ['king khan', 'Dhakar Mastan']
+}
+
+const [firstMovie, secondMovie] = student.movies;
+```
+
