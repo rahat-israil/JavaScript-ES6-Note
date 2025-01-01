@@ -606,3 +606,48 @@ console.log(name); // Output: John
 console.log(age);  // Output: 30 (default value)
 ```
 
+### Nested Object Destructuring
+
+```jsx
+const person = {
+  name: "Sarah",
+  contact: {
+    email: "sarah@example.com",
+    phone: "123-456-7890"
+  }
+};
+
+// Nested object destructuring
+const { name, contact: { email, phone } } = person;
+
+console.log(name);  // Output: Sarah
+console.log(email); // Output: sarah@example.com
+console.log(phone); // Output: 123-456-7890
+```
+
+- **Object Destructuring**-এ `?` অপারেটর সরাসরি কোনো ভিন্ন কাজ করে না, কিন্তু এটি **Optional Chaining (`?.`)** এর মাধ্যমে অবজেক্টের গভীরতর প্রপার্টি নিরাপদে অ্যাক্সেস করতে সাহায্য করে। এটি `null` বা `undefined` প্রপার্টি থাকলে এরর না দিয়ে `undefined` রিটার্ন করে।
+
+```jsx
+const employee = {
+    ide: 'VS Code',
+    designation: 'developer',
+    machine: 'mac',
+    languages: ['html', 'css', 'js'],
+    specification: {
+        height: 66,
+        weight: 67,
+        address: 'kumarkhali',
+        drink: 'water',
+        watch: {
+            color: 'black',
+            price: 500,
+            brand: 'garmin'
+        }
+    }
+}
+
+const { machine, ide } = employee;
+// const { weight, address } = employee.specification;
+const { brand } = employee?.specification?.watch;
+```
+
