@@ -651,3 +651,36 @@ const { machine, ide } = employee;
 const { brand } = employee?.specification?.watch;
 ```
 
+## JSON
+
+- **`JSON.stringify()`** এবং **`JSON.parse()`** হলো জাভাস্ক্রিপ্টের দুটি মেথড যা ডাটা ফরম্যাট পরিবর্তনের জন্য ব্যবহৃত হয়।
+- **`JSON.stringify()`**: জাভাস্ক্রিপ্ট অবজেক্টকে JSON ফরম্যাটে স্ট্রিং-এ রূপান্তর করে।
+- **`JSON.parse()`**: JSON ফরম্যাটের স্ট্রিংকে আবার জাভাস্ক্রিপ্ট অবজেক্টে রূপান্তর করে।
+
+### **Stringifying JSON (Convert JavaScript Object to JSON String)**
+
+```jsx
+const user = {
+  name: "Ali",
+  age: 25
+};
+
+// Convert JavaScript object to JSON string
+const jsonString = JSON.stringify(user);
+
+console.log(jsonString);
+// Output: {"name":"Ali","age":25}
+```
+
+### **Parsing JSON (Convert JSON String to JavaScript Object)**
+
+```jsx
+const jsonString = '{"name": "Ali", "age": 25}';
+
+// Convert JSON string to JavaScript object
+const user = JSON.parse(jsonString);
+
+console.log(user.name); // Output: Ali
+console.log(user.age);  // Output: 25
+```
+
