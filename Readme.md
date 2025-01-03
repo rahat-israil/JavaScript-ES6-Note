@@ -720,3 +720,26 @@ fetch('url')
     .then(data => console.log(data));
 ```
 
+## Key & Value in a Object
+
+- JavaScript এ **`Object.keys()`** এবং **`Object.values()`** ব্যবহার করে আপনি কোনো অবজেক্টের **কী** (property) এবং **ভ্যালু** (value) আলাদা করে পেতে পারেন।
+
+```jsx
+const student = {
+  name: 'John Doe',
+  age: 21,
+  course: 'Computer Science',
+  isGraduated: false
+};
+
+// Get all keys of the student object
+const keys = Object.keys(student);
+console.log(keys); 
+// Output: ['name', 'age', 'course', 'isGraduated']
+
+// Get all values of the student object
+const values = Object.values(student);
+console.log(values);
+// Output: ['John Doe', 21, 'Computer Science', false]
+```
+
