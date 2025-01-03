@@ -684,3 +684,29 @@ console.log(user.name); // Output: Ali
 console.log(user.age);  // Output: 25
 ```
 
+**Full Code**
+
+```jsx
+// Step 1: Create a JavaScript object
+const user = {
+  name: "Ali Hasan",
+  age: 25,
+  isStudent: true,
+  skills: ["HTML", "CSS", "JavaScript"],
+  address: {
+    city: "Dhaka",
+    country: "Bangladesh"
+  }
+};
+
+console.log("Original Object:", user);
+
+// Step 2: Convert the JavaScript object into a JSON string
+const jsonString = JSON.stringify(user);
+console.log("Stringified JSON:", jsonString);
+
+// Step 3: Convert the JSON string back into a JavaScript object
+const parsedObject = JSON.parse(jsonString);
+console.log("Parsed Object:", parsedObject);
+```
+
