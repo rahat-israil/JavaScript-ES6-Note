@@ -710,3 +710,13 @@ const parsedObject = JSON.parse(jsonString);
 console.log("Parsed Object:", parsedObject);
 ```
 
+## Fetch
+
+- `fetch` API হল জাভাস্ক্রিপ্টের একটি আধুনিক পদ্ধতি যা নেটওয়ার্ক রিকোয়েস্ট (যেমন সার্ভার থেকে ডেটা আনা বা সার্ভারে ডেটা পাঠানো) করার জন্য ব্যবহৃত হয়। এটি পুরনো `XMLHttpRequest` এর একটি উন্নত এবং নমনীয় বিকল্প।
+
+```jsx
+fetch('url')
+    .then(res => res.json())
+    .then(data => console.log(data));
+```
+
