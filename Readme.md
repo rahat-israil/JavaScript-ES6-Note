@@ -795,3 +795,63 @@ else {
 // Output : 500
 ```
 
+
+## **falsy**
+
+JavaScript-এ **"falsy"** মানে এমন ভ্যালু যা **boolean context** (যেমন `if` statement বা logical operation) এ ব্যবহৃত হলে **`false`** হিসেবে বিবেচিত হয়।
+
+### **Falsy Values in JavaScript**:
+
+JavaScript-এ মোট **6টি falsy** ভ্যালু রয়েছে:
+
+- **`false`** — boolean মান `false`।
+- **`0`** — শূন্য সংখ্যা।
+- **`""` (খালি স্ট্রিং)** — কোনো ক্যারেক্টার ছাড়া স্ট্রিং।
+- **`null`** — একটি নাল বা অস্তিত্বহীন মান।
+- **`undefined`** — কোনো মান সংজ্ঞায়িত না হওয়া বা অপরিবর্তিত মান।
+- **`NaN`** — "Not a Number" মান, যা তখন রিটার্ন হয় যখন কোনো গাণিতিক অপারেশন ব্যর্থ হয়।
+
+```jsx
+let userInput = "";  // An empty string is falsy
+
+if (userInput) {
+  console.log("User input is not empty.");
+} else {
+  console.log("User input is empty.");
+}
+// Output : User input is empty.
+```
+
+```jsx
+let quantity = 0;  // Zero is falsy
+
+if (quantity) {
+  console.log("Quantity is greater than zero.");
+} else {
+  console.log("Quantity is zero.");
+}
+// Output : Quantity is zero.
+```
+
+```jsx
+let userInput = "";  // An empty string is falsy
+
+if (!userInput) {
+  console.log("User input is empty.");
+} else {
+  console.log("User input is not empty.");
+}
+// Output : User input is empty.
+```
+
+```jsx
+let quantity = 0;  // Zero is falsy
+
+if (!quantity) {
+  console.log("Quantity is zero.");
+} else {
+  console.log("Quantity is greater than zero.");
+}
+// Output : Quantity is zero.
+```
+
