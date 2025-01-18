@@ -855,3 +855,22 @@ if (!quantity) {
 // Output : Quantity is zero.
 ```
 
+
+## Number to String conversion
+
+```jsx
+const num1 = 52;
+
+const numStr = num1 + ''; 
+console.log(numStr)
+```
+
+## String to Number conversion
+
+```jsx
+const input = '560';
+const inputNum = +input;
+console.log(inputNum);
+```
+
+
