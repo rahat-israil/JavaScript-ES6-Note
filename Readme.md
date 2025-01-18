@@ -756,3 +756,42 @@ const products = [
 
 const remaining = products.filter(p => p.name !== 'phone');
 ```
+
+
+## **truthy**
+
+- JavaScript-এ **"truthy"** মানে এমন কোনো ভ্যালু যা **boolean context** (যেমন `if` statement বা logical operation) এ ব্যবহার করলে **`true`** হিসেবে বিবেচিত হয়।
+
+যখন JavaScript কোনো ভ্যালুকে **boolean** হিসেবে রূপান্তর করে (যেমন `if` statement বা অন্য কোনো তুলনামূলক অপারেশনে), তখন **truthy** মানে হলো সেই ভ্যালু **`true`** হিসেবে বিবেচিত হবে।
+
+### **Truthy Value Examples:**
+
+- খালি নয় এমন স্ট্রিং (যেমন `"hello"`, `'0'`, `' '`).
+- শূন্য ছাড়া অন্য যে কোনো সংখ্যা (যেমন `1`, `1`, `3.14`).
+- অবজেক্ট (যেমন `{}`, `[]`).
+- ফাংশন (যেমন `function() {}`).
+- `true` (boolean নিজেই).
+
+```jsx
+let name = "Ali Hasan";
+
+if (name) {
+  console.log("এটি একটি truthy মান");
+} else {
+  console.log("এটি একটি falsy মান");
+}
+// Output : এটি একটি truthy মান
+```
+
+```jsx
+let myVar = 5;
+ 
+if (myVar) {
+    myVar = myVar * 100;
+}
+else {
+    myVar = 0;
+}
+// Output : 500
+```
+
